@@ -20,3 +20,8 @@ Then, when you ask a question in natural language, the system retrieves the most
 
 ###  How it Works:
 1. Extracts text from an uploaded PDF.
+2. Splits the text into overlapping chunks.
+3. Creates vector embeddings for each chunk via OpenAI.
+4. Stores all embeddings in ChromaDB.
+5. Accepts a natural-language question from the user.
+6. Retrieves the most relevant chunks and generates an LLM-based answer.
